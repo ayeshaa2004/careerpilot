@@ -6,14 +6,18 @@ export default function Navbar() {
       <Link href="/" className="text-2xl font-bold">
         CareerPilot
       </Link>
-      <div className="flex items-center gap-8">
-        <a href="#features">Features</a>
+      <div className="flex items-center gap-3 sm:gap-8">
+        <div className="hidden sm:flex items-center gap-8">
+          <a href="#features">Features</a>
 
-        <a href="#how-it-works">How it works</a>
+          <a href="#how-it-works">How it works</a>
+        </div>
 
         <Show when="signed-out">
           <SignInButton mode="modal">
-            <button className="rounded-full border px-5 py-2">Sign in</button>
+            <button className="rounded-full border px-3 py-1.5 text-sm sm:px-5 sm:py-2 sm:text-base">
+              Sign in
+            </button>
           </SignInButton>
         </Show>
 
